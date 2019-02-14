@@ -25,11 +25,22 @@
 
 %D The module is used as follows:
 %D
+%D \starttyping
+%D
 %D \usemodule [downsample]
 %D
 %D \setupexternalfigures
 %D   [conversion=downsample.pdf,
 %D    resolution=300]
+%D
+%D \starttext
+%D
+%D %% Either width or height needs to be set for the conversion to take place
+%D \externalfigure [foobar] [width=10cm]
+%D
+%D \stoptext
+%D
+%D \stoptyping
 
 \protect
 
