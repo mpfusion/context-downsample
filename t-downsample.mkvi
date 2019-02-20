@@ -1,6 +1,6 @@
 %D \module
 %D   [     file=t-downsample,
-%D      version=2019.02.02,
+%D      version=2019.02.20,
 %D        title=\CONTEXT\ User Module,
 %D     subtitle=Downsample,
 %D       author=Marco Patzer,
@@ -15,7 +15,7 @@
 %C the Free Software Foundation, either version 3 of the License, or
 %C any later version.
 
-\writestatus{loading}{ConTeXt User Module / Downsample (ver: 2019.02.08)}
+\writestatus{loading}{ConTeXt User Module / Downsample (ver: 2019.02.20)}
 
 \startmodule [downsample]
 
@@ -27,16 +27,19 @@
 %D
 %D \starttyping
 %D
-%D \usemodule [downsample]
+%D \usemodule
+%D   [downsample]
 %D
 %D \setupexternalfigures
-%D   [conversion=downsample.pdf,
-%D    resolution=300]
+%D   [location=default,  %% to be able to find sample images
+%D    conversion=downsample.pdf,
+%D    resolution=50,
+%D    cache=tmp]         %% where to store the downscaled versions
 %D
 %D \starttext
 %D
 %D %% Either width or height needs to be set for the conversion to take place
-%D \externalfigure [foobar] [width=10cm]
+%D \externalfigure [hacker] [width=10cm]
 %D
 %D \stoptext
 %D
